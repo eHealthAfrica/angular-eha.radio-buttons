@@ -1,6 +1,6 @@
 {
   "name": "angular-eha.radio-buttons",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Stylish radio button group",
   "main": "dist/radio-buttons.template.js",
   "scripts": {

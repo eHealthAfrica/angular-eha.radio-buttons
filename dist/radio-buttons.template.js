@@ -61,7 +61,9 @@ angular.module("templates/radio-buttons.template.tpl.html", []).run(["$templateC
       scope: {
         model: '='
       },
-      templateUrl: 'templates/radio-buttons.template.tpl.html'
+      templateUrl: function(element, attrs) {
+        return attrs.templateUrl || 'templates/radio-buttons.template.tpl.html';
+      }
     };
   });
 
