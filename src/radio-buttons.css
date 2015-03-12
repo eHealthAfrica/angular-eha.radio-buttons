@@ -30,7 +30,7 @@
   pointer-events: none;
 }
 
-.eha-radio-buttons .btn.no {
+.eha-radio-buttons .btn + .btn {
   margin-right: 0;
   float: right;
 }
