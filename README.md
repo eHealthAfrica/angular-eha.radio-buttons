@@ -62,10 +62,17 @@ Then you're free to include whichever bundle you prefer in what ever manner you 
     </script>
   </head>
   <body>
-    <!-- Put an example here! -->
+   <eha-radio-buttons
+      model="myModel"
+   ></eha-radio-buttons>
   </body>
 </html>
 ```
+
+## Options
+
+* `model` (required): The scope property to bind to (two-way)
+* `templateUrl`: An optional path to a template
 
 ## Contributing
 
