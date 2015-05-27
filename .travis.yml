@@ -7,6 +7,8 @@ cache:
   - node_modules
 notifications:
   email: false
+after_script:
+- "./scripts/bower-deploy.sh"
 before_deploy:
 - npm config set spin false --global
 deploy:
