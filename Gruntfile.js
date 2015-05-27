@@ -91,53 +91,10 @@ module.exports = function(grunt) {
           }
         }
       }
-    },
-    karma: {
-      options: {
-        configFile: 'karma.conf.js'
-      },
-      unit: {
-        singleRun: true,
-        autoWatch: false
-      },
-      watch: {
-        singleRun: false,
-        autoWatch: true
-      }
-    },
-    bump: {
-      options: {
-        files: ['package.json', 'bower.json'],
-        updateConfigs: [],
-        commit: true,
-        commitMessage: 'Release v%VERSION%',
-        commitFiles: ['package.json', 'bower.json', 'dist/'],
-        createTag: true,
-        tagName: 'v%VERSION%',
-        tagMessage: 'Version %VERSION%',
-        push: false,
-        // pushTo: 'origin',
-        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-        globalReplace: false,
-        prereleaseName: false,
-        regExp: false
-      }
-    },
-    jshint: {
-      all: ['src/**/*.js', 'tests/**/*.spec.js']
-    },
-    jscs: {
-      src: ['src/**/*.js', 'tests/**/*.spec.js'],
-      options: {
-        config: '.jscsrc',
-        requireCurlyBraces: [ 'if' ]
-      }
     }
   });
 
   grunt.registerTask('template', ['html2js']);
-  grunt.registerTask('test', ['template', 'jshint', 'jscs', 'karma:unit']);
-  grunt.registerTask('test:watch', ['karma:watch']);
 
   grunt.registerTask('build', function() {
     grunt.task.run([
@@ -153,13 +110,5 @@ module.exports = function(grunt) {
     ]);
   });
 
-  grunt.registerTask('release', function(target) {
-    grunt.task.run([
-      'build',
-      'bump:' + target
-    ]);
-  });
-
-  grunt.registerTask('default', ['jshint', 'jscs', 'build']);
-
+  grunt.registerTask('default', ['build']);
 };

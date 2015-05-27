@@ -1,7 +1,6 @@
 {
   "name": "angular-eha.radio-buttons",
   "description": "Stylish radio button group",
-  "version": "1.1.0",
   "authors": [
     "Tom Vincent <git@tlvince.com>"
   ],
@@ -9,7 +8,7 @@
     "globals",
     "node"
   ],
-  "homepage": "https://tlvince.com",
+  "homepage": "http://docs.ehealthafrica.org/angular-eha.radio-buttons/",
   "keywords": "radio,button,yesno,toggle",
   "main": [
     "dist/radio-buttons.template.js",

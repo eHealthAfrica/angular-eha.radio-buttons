@@ -38,3 +38,7 @@
 .eha-radio-buttons .btn .fa:before {
   margin: 0 0.3em 0 0;
 }
+
+.eha-radio-buttons .btn .fa {
+  display: inline;
+}

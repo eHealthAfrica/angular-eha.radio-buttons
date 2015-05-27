@@ -1,14 +1,23 @@
 sudo: false
 language: node_js
 node_js:
-- '0.12'
-before_script:
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-- npm install -g grunt-cli
-- npm install
-script:
-- npm test
+- '0.10'
 cache:
   directories:
   - node_modules
+notifications:
+  email: false
+before_deploy:
+- npm config set spin false --global
+deploy:
+  provider: npm
+  email: oss@ehealthafrica.org
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: eHealthAfrica/angular-eha.radio-buttons
+  api_key:
+    secure: RRlM4LxzQmOiKDsmZFR7Hbn18Wm+JDH738DfZo/JJ9vKlsbDvGU2ICUssmK5CTacZpo+SO2wXbtQ1zUb/wAWL++Hn089CcYwo2oJrHIF2H6NF/u35g3AuFRbwqr2YGctyufqBAv7fiAJCfHDGlF7tZg4y8+cthJoa7Qv1KAIIvI=
+env:
+  global:
+    secure: KZYdE7dsBWmQfOxNxIINApT2TKRelUhC58E+YP9w+HfjH5JhhL+rAxAOPtrAM9ZxnS9i0J6VZd7Jjj7VXP3VGIcDnaIUsjzaBPBe9UTGotFrHI6F56Tko/ZxV309kajUoaqWEIp82UmxazPs69K2cOV4CpDP9ZGmXNZP1bKGnE4=
