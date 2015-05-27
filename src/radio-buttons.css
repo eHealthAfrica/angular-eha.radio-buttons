@@ -1,5 +1,6 @@
 .eha-radio-buttons {
   display: inline-block;
+  width: 100%;
 }
 
 .eha-radio-buttons .btn {
