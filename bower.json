@@ -11,8 +11,8 @@
   "homepage": "http://docs.ehealthafrica.org/angular-eha.radio-buttons/",
   "keywords": "radio,button,yesno,toggle",
   "main": [
-    "dist/radio-buttons.template.js",
-    "dist/radio-buttons.css"
+    "radio-buttons.template.js",
+    "radio-buttons.css"
   ],
   "repository": {
     "type": "git",
