@@ -15,6 +15,15 @@
 ></eha-radio-buttons>
 ```
 
+Optionally, pass in a path to a custom template:
+
+```html
+<eha-radio-buttons
+  model="radios"
+  template-url="/path/to/tpl.html"
+></eha-radio-buttons>
+```
+
 ## Installation
 
 Install with npm:
