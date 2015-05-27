@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-info() { echo "$0: $1"; }
-error() { info "$1"; exit 1; }
+error() { echo "$0: $1"; exit 1; }
 
 [[ "$TRAVIS" ]] || error "Please run this script in TravisCI"
 [[ "$TRAVIS_TAG" ]] || error "Only deploying tagged builds"
