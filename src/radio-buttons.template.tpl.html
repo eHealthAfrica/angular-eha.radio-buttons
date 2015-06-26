@@ -2,22 +2,22 @@
   <button
     class="btn yes"
     ng-model="model"
-    ng-class="model === 'Y' && 'active'"
-    btn-radio="'Y'"
+    ng-class="model === true && 'active'"
+    btn-radio="true"
   >
     <span
-      ng-class="model === 'Y' && 'fa fa-check-circle' || 'fa fa-circle-o'"
+      ng-class="model === true && 'fa fa-check-circle' || 'fa fa-circle-o'"
       translate
     >Yes</span>
   </button>
   <button
     class="btn no"
     ng-model="model"
-    ng-class="model === 'N' && 'active'"
-    btn-radio="'N'"
+    ng-class="model === false && 'active'"
+    btn-radio="false"
   >
     <span
-      ng-class="model === 'N' && 'fa fa-check-circle' || 'fa fa-circle-o'"
+      ng-class="model === false && 'fa fa-check-circle' || 'fa fa-circle-o'"
       translate
     >No</span>
   </button>
